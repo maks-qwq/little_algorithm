@@ -42,3 +42,9 @@ kosztowi wyłączenia tego odcinka
 
 # zadania do rozdzielenia
 
+Michał: krok 1 (funkcja matrix_reduction() + definicja problemów i ewentualnie dodatkowe)
+
+
+Tymek: krok 2 i 3 (funkcje section_ij() i split_problem() i ewentualnie dodatkowe)
+
+Maks: krok 4 i 5 (little_algorithm() + ewentualnie dodatkowe problemy)
