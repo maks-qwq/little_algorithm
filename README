@@ -1,0 +1,44 @@
+# little algorithm
+
+Krok I: Redukcja macierzy i wyznaczenie LB
+• wiersze
+• kolumny
+
+Krok 2: Wyznaczenie odcinka <i\*j\*> o max optymistycznym koszcie wyłączenia (spośród wszystkich aij=O)
+
+Krok 3: Podział problemu na dwa PP (l.-zawierający i 2.-nie wybrany odcinek <i\*j\*>) - wyznaczenie LB dla PP
+• Dla I.PP: wykreślamy i\*-wiersz oraz j\*-kolumnę,
+zabraniamy podcyklu i na podstawie dodatkowej
+redukcji wyznaczamy nowe LB
+• Dla 2.PP: zabraniamy <i\*j\*>, redukcja, LB
+
+Krok 4: Analiza PP i kryterium zakończenia obliczeń.
+• Próba zamknięcia PP za pomocą KZI, KZ2, KZ3 (v*!)
+• Jeżeli wszystkie zamknięte to STOP (v\* - f.c. X\* )
+
+Krok 5: Wybór PP (nie zamkniętego) o min wartości LB
+• idź do Kroku 2.
+
+
+• Optymistyczny koszt wyłączenia odcinka wyznaczamy dla wszystkich odcinków zerowych — jest to suma min w wierszu i kolumnie z wyłączeniem tego elementu.
+$$\forall_{a_{ij}=0}:d_{ij} = min_{k=1,...,n \land k \neq j}a_{ik} + min_{l=1,...,n \land l \neq i}a_{lj} $$
+
+• Zabronienie przeciwdziałające powstaniu podcyklu polega
+na wykluczeniu z drogi odcinka, który wraz z ostatnio
+włączonym <i\*j\*> (i wcześniejszymi) domyka podcykl (o
+długości mniejszej niż n — rozmiar problemu)
+    
+- Znalezienie p - początku łańcucha z odcinkiem <i\*j\*>
+
+- Znalezienie k -końca łańcucha z odcinkiem <i\*j\*>
+
+- Zabronienie odcinka (tzn. akp = nieskończoność)
+
+• Wielkość redukcji w 2.PP po dokonaniu zabronienia
+<i\*j\*> (tzn. ) jest równa optymistycznemu
+kosztowi wyłączenia tego odcinka
+
+
+
+# zadania do rozdzielenia
+
