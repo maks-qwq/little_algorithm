@@ -12,4 +12,7 @@ def split_problem():
     # Wyznaczenie odcinka <i\*j\*> o max optymistycznym koszcie wyłączenia (spośród wszystkich aij=O)
     pass
 
-def 
+def little_algorithm():
+    # TODO: krok 4 i 5; gdzie jest też powrt do kroku 1
+    pass
+
